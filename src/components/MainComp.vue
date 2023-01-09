@@ -13,11 +13,23 @@ export default {
 <template>
 
   <main>
-    <h1>Main</h1>
+    <h2>Content goes here</h2>
   </main>
   
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+    @use "../styles/general.scss" as *;
+    @use "../styles/partials/variables" as *;     
+    
+        main{
+          background-color: black;
+          color: white;
+          width: 100%;
+
+          h2{
+            padding: 3rem;
+          }
+        }
 
 </style>
