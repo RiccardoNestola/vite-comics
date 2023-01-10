@@ -1,7 +1,11 @@
 <script>
-import booksList from './ProductComp.vue';
+import ProductComp from './ProductComp.vue';
 
 export default{
+  
+  components: {
+    ProductComp
+  },
     data(){
         return{
             booksList: [
@@ -88,12 +92,13 @@ export default{
 
   <main>
     <div class="grid">
-      <div class="card" v-for="book in booksList" :img="book.thumb" :price="book.price" :series="book.series" :type="book.type">
+      <ProductComp v-for="book in booksList" :imgPath="book.thumb" :price="book.price" :series="book.series" :type="book.type" class="card"/>
+      <!-- <div class="card" v-for="book in booksList" :imgPath="book.thumb" :price="book.price" :series="book.series" :type="book.type"> -->
         
       </div>
 
 
-    </div>
+    
   </main>
   
 </template>
@@ -119,13 +124,7 @@ export default{
           padding: 4rem;
         
         }
-
-        .card{
-          height: 100px;
-          width: calc(100% / 6 - 1rem);
-          background-color: white;
-          
-          margin:.5rem;
-        }
+        
+        
 
 </style>
