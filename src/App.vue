@@ -2,6 +2,7 @@
 import HeaderComp from './components/HeaderComp.vue';
 import MainComp from './components/MainComp.vue';
 import FooterComp from './components/FooterComp.vue';
+import BannerComp from './components/BannerComp.vue';
 
 export default {
   
@@ -9,6 +10,7 @@ export default {
 	HeaderComp,
   MainComp,
   FooterComp,
+  BannerComp
   }
 
 }
@@ -18,6 +20,8 @@ export default {
 <template>
 
 <HeaderComp/>
+
+<BannerComp/>
 
 <MainComp/>
 
